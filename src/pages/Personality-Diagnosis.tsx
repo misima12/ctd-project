@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {useNavigate}from "react-router";
 
 const questions = [
   {
@@ -52,6 +53,7 @@ const PersonalityDiagnosis: React.FC = () => {
     (sum, ans, idx) => sum + (ans !== -1 ? questions[idx].scores[ans] : 0),
     0
   );
+    const navigate = useNavigate();
 
   return (
     <div style={{ maxWidth: 500, margin: '0 auto', padding: 20 }}>
@@ -82,6 +84,7 @@ const PersonalityDiagnosis: React.FC = () => {
           <button type="submit" disabled={answers.includes(-1)}>
             診断する
           </button>
+          <button onClick={() =>navigate ('/SettingPage')}>❌</button>
         </form>
       ) : (
         <div>
@@ -90,6 +93,7 @@ const PersonalityDiagnosis: React.FC = () => {
           <button onClick={() => { setAnswers(Array(questions.length).fill(-1)); setShowResult(false); }}>
             もう一度診断する
           </button>
+          <button onClick={() =>navigate ('/SettingPage')}>設定ページに戻る</button>
         </div>
       )}
     </div>
