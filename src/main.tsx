@@ -5,6 +5,7 @@ import App from './App.tsx'
 import { BrowserRouter , Route,Routes} from 'react-router'
 import MainPage from './pages/MainPage.tsx'
 import SettingPage from './pages/SettingPage.tsx'
+import PersonalityDiagnosis from './pages/personality-diagnosis.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')!).render(
         <Route path="/" element={<App />} />
         <Route path="/MainPage" element={<MainPage/>} />
         <Route path="/SettingPage" element={<SettingPage />} />
+        <Route path="/PersonalityDiagnosis" element={<PersonalityDiagnosis />} />
       </Routes> 
     </BrowserRouter>
   

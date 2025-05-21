@@ -9,7 +9,7 @@ function MainPage() {
     <div>
       <h1>Main Page</h1>
       <p>Welcome to the main page!</p>
-      <button onClick={() => navigate('./SettingPage')}>設定ページへ</button>
+      <button onClick={() => navigate('/SettingPage')}>設定ページへ</button>
     </div>
   );
 }
